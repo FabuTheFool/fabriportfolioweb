@@ -12,7 +12,7 @@ export const Header = () => {
           Sobre Mi
         </a>
         <a
-          href="#"
+          href="https://api.whatsapp.com/send?phone=595981400359"
           className=" nav-item  bg-white !text-gray-900 hover:bg-white/75 transition duration-300"
         >
           Contacto
