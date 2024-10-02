@@ -10,6 +10,8 @@ import voucher from "@/assets/images/VOUCHERASISTIA.png";
 
 import CheckIconCircular from "@/assets/icons/check-circle.svg";
 import ArrowDiag from "@/assets/icons/arrow-up-right.svg";
+import { url } from "inspector";
+import grainImage from "@/assets/images/grain.jpg";
 
 const portfolioProjects = [
   {
@@ -85,7 +87,7 @@ const portfolioProjects = [
 
 export const ProjectsSection = () => {
   return (
-    <div>
+    <section className="pb-16">
       <div className="container">
         <div className="flex justify-center">
           <p className="uppercase font-semibold tracking-widest bg-gradient-to-r from-emerald-500 to-sky-500 text-transparent bg-clip-text">
@@ -96,12 +98,16 @@ export const ProjectsSection = () => {
         <p className="text-center text-white/60 mt-4">
           Conceptos transformados en experiencias digitales
         </p>
-        <div className="flex flex-col mt-10">
+        <div className="flex flex-col mt-10 gap-16">
           {portfolioProjects.map((project) => (
             <div
               key={project.title}
-              className="bg-gray-800 rounded-3xl relative z-0 overflow-hidden after:z-10 after:content-[''] after:absolute after:inset-0 after:outline-2 after:outline after:-outline-offset-2 after:rounded-3xl after:outline-white/20 px-8 py-8"
+              className="bg-gray-800 rounded-3xl relative z-0 overflow-hidden after:z-10 after:content-[''] after:absolute after:inset-0 after:outline-2 after:outline after:-outline-offset-2 after:rounded-3xl after:outline-white/20 px-8 py-8 after:pointer-events-none"
             >
+              <div
+                className="absolute inset-0 -z-10 opacity-5"
+                style={{ backgroundImage: `url(${grainImage.src})` }}
+              ></div>
               <div className="bg-gradient-to-r from-emerald-500 to-sky-500 text-transparent bg-clip-text inline-flex gap-2 font-bold uppercase tracking-widest text-md">
                 <span>{project.company}</span>
                 <span>&bull;</span>
@@ -138,6 +144,6 @@ export const ProjectsSection = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
