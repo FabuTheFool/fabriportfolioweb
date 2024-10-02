@@ -17,10 +17,9 @@ const portfolioProjects = [
     year: "2024",
     title: "Asistia Landing Page",
     results: [
-      { title: "punto 1" },
+      { title: "Posicionamiento SEO" },
       { title: "Google Analytics" },
-      { title: "Punto 3" },
-      { title: "Punto 4" },
+      { title: "Direccionamiento form via SMTP" },
     ],
     link: "https://asistia.com.py/",
     image: asistia,
@@ -133,7 +132,7 @@ export const ProjectsSection = () => {
               <Image
                 src={project.image}
                 alt={project.title}
-                className="mt-8 -mb-8 "
+                className="mt-8 -mb-8 rounded-md "
               />
             </div>
           ))}
