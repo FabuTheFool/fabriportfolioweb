@@ -94,15 +94,17 @@ export const ProjectsSection = () => {
             Trabajos Realizados
           </p>
         </div>
-        <h2 className="font-serif text-3xl text-center mt-6">Mis Proyectos</h2>
-        <p className="text-center text-white/60 mt-4">
+        <h2 className="font-serif text-3xl md:text-5xl text-center mt-6 ">
+          Mis Proyectos
+        </h2>
+        <p className="text-center md:text-lg max-w-md mx-auto text-white/60 mt-4">
           Conceptos transformados en experiencias digitales
         </p>
-        <div className="flex flex-col mt-10 gap-16">
+        <div className="flex flex-col mt-10 gap-16 md:mt-20">
           {portfolioProjects.map((project) => (
             <div
               key={project.title}
-              className="bg-gray-800 rounded-3xl relative z-0 overflow-hidden after:z-10 after:content-[''] after:absolute after:inset-0 after:outline-2 after:outline after:-outline-offset-2 after:rounded-3xl after:outline-white/20 px-8 py-8 after:pointer-events-none"
+              className="bg-gray-800 rounded-3xl relative z-0 overflow-hidden after:z-10 after:content-[''] after:absolute after:inset-0 after:outline-2 after:outline after:-outline-offset-2 after:rounded-3xl after:outline-white/20 px-8 py-8 after:pointer-events-none md:pt-12 md:px-10"
             >
               <div
                 className="absolute inset-0 -z-10 opacity-5"
@@ -114,13 +116,15 @@ export const ProjectsSection = () => {
                 <span>{project.year}</span>
               </div>
 
-              <h3 className="font-serif text-2xl mt-2">{project.title}</h3>
-              <hr className="border-t-2 border-white/10 mt-4" />
-              <ul className="flex flex-col gap-4 mt-4">
+              <h3 className="font-serif text-2xl mt-2 md:text-4xl md:mt-5">
+                {project.title}
+              </h3>
+              <hr className="border-t-2 border-white/10 mt-4 md:mt-5" />
+              <ul className="flex flex-col gap-4 mt-4 md:mt-5">
                 {project.results.map((result) => (
                   <li
                     key={result.title}
-                    className="flex gap-2 text-sm text-white/50"
+                    className="flex gap-2 text-sm md:text-base text-white/50"
                   >
                     <CheckIconCircular className="size-5" />
                     <span>{result.title}</span>
@@ -129,7 +133,7 @@ export const ProjectsSection = () => {
               </ul>
               <a href={project.link}>
                 <button className="bg-white text-gray-950 h-12 w-full rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8 transition-all duration-400 hover:animate-pulse-white ">
-                  <span className="bg-gradient-to-r from-emerald-500 to-sky-500 text-transparent bg-clip-text ">
+                  <span className="bg-gradient-to-r from-emerald-500 to-sky-500 text-transparent bg-clip-text duration-400 infinite">
                     Ver Proyecto
                   </span>
                   <ArrowDiag className="size-5 bg-gradient-to-r from-emerald-500 to-sky-500 bg-clip-text" />

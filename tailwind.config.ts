@@ -27,17 +27,13 @@ const config: Config = {
       },
       keyframes: {
         "pulse-white": {
-          "0%": {
+          "0%, 100%": {
             transform: "scale(0.95)",
             boxShadow: "0 0 0 0 rgba(255, 255, 255, 0.7)",
           },
           "70%": {
             transform: "scale(1)",
             boxShadow: "0 0 0 10px rgba(255, 255, 255, 0)",
-          },
-          "100%": {
-            transform: "scale(0.99)",
-            boxShadow: "0 0 0 0 rgba(255, 255, 255, 0)",
           },
         },
       },
