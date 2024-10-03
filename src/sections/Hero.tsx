@@ -77,10 +77,13 @@ export const HeroSection = () => {
           </p>
         </div>
         <div className="flex flex-col items-center mt-8  gap-4 md:flex-row justify-center">
-          <button className="boton1 inline-flex items-center gap-2 bg-gray-900/20 border border-white/15 px-6 h-12 rounded-xl backdrop-blur">
+          <a
+            href="#projects"
+            className="boton1 inline-flex items-center gap-2 bg-gray-900/20 border border-white/15 px-6 h-12 rounded-xl backdrop-blur"
+          >
             <span className="font-semibold">Mi trabajo</span>
             <ArrowDown className="size-4" />
-          </button>
+          </a>
           <a
             href="https://api.whatsapp.com/send?phone=595981400359"
             className="boton2 inline-flex items-center gap-2 border-white text bg-white text-gray-900 h-12 px-6 border rounded-xl"

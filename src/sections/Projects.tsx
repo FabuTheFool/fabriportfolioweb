@@ -83,11 +83,25 @@ const portfolioProjects = [
     link: "https://asisrank.com",
     image: asisrank,
   },
+  {
+    company: "AsisRank2",
+    year: "2024",
+    title: "Plataforma Web en Proceso",
+    results: [
+      { title: "Creador y diseñador del Proyecto" },
+      { title: "Categorizacion de empresas" },
+      { title: "Sistema de reviews" },
+      { title: "Sistema de miembros de empresas " },
+      { title: "Red Social " },
+    ],
+    link: "https://asisrank.com",
+    image: asisrank,
+  },
 ];
 
 export const ProjectsSection = () => {
   return (
-    <section className="pb-16">
+    <section className="pb-16" id="projects">
       <div className="container">
         <div className="flex justify-center">
           <p className="uppercase font-semibold tracking-widest bg-gradient-to-r from-emerald-500 to-sky-500 text-transparent bg-clip-text">
@@ -138,7 +152,7 @@ export const ProjectsSection = () => {
               <Image
                 src={project.image}
                 alt={project.title}
-                className="mt-8 -mb-8 rounded-md "
+                className="mt-8 -mb-8 rounded-lg align-center "
               />
             </div>
           ))}
