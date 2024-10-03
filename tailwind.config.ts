@@ -25,6 +25,25 @@ const config: Config = {
         sans: ["var(--font-sans)", "sans-serif"],
         serif: ["var(--font-serif)", "serif"],
       },
+      keyframes: {
+        "pulse-white": {
+          "0%": {
+            transform: "scale(0.95)",
+            boxShadow: "0 0 0 0 rgba(255, 255, 255, 0.7)",
+          },
+          "70%": {
+            transform: "scale(1)",
+            boxShadow: "0 0 0 10px rgba(255, 255, 255, 0)",
+          },
+          "100%": {
+            transform: "scale(0.99)",
+            boxShadow: "0 0 0 0 rgba(255, 255, 255, 0)",
+          },
+        },
+      },
+      animation: {
+        "pulse-white": "pulse-white 3s infinite",
+      },
     },
   },
   variants: {

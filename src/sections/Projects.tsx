@@ -83,20 +83,6 @@ const portfolioProjects = [
     link: "https://asisrank.com",
     image: asisrank,
   },
-  {
-    company: "AsisRank2",
-    year: "2024",
-    title: "Plataforma Web en Proceso",
-    results: [
-      { title: "Creador y diseñador del Proyecto" },
-      { title: "Categorizacion de empresas" },
-      { title: "Sistema de reviews" },
-      { title: "Sistema de miembros de empresas " },
-      { title: "Red Social " },
-    ],
-    link: "https://asisrank.com",
-    image: asisrank,
-  },
 ];
 
 export const ProjectsSection = () => {
@@ -142,18 +128,20 @@ export const ProjectsSection = () => {
                 ))}
               </ul>
               <a href={project.link}>
-                <button className="bg-white text-gray-950 h-12 w-full rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8">
-                  <span className="bg-gradient-to-r from-emerald-500 to-sky-500 text-transparent bg-clip-text">
+                <button className="bg-white text-gray-950 h-12 w-full rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8 transition-all duration-400 hover:animate-pulse-white ">
+                  <span className="bg-gradient-to-r from-emerald-500 to-sky-500 text-transparent bg-clip-text ">
                     Ver Proyecto
                   </span>
                   <ArrowDiag className="size-5 bg-gradient-to-r from-emerald-500 to-sky-500 bg-clip-text" />
                 </button>
               </a>
-              <Image
-                src={project.image}
-                alt={project.title}
-                className="mt-8 -mb-8 rounded-lg align-center "
-              />
+              <div className="overflow-hidden z-0 rounded-lg">
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  className="mt-8 -mb-8 rounded-lg align-center  "
+                />
+              </div>
             </div>
           ))}
         </div>
